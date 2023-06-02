@@ -7,11 +7,11 @@ export default function navBar() {
 
     return(
 
-        <div>
-            <img src={home} alt="" />
-            <img src={bill} alt="" />
-            <img src={group} alt="" />
-            <img src={hist} alt="" />
+        <div className='navBar'>
+            <div><img src={home} alt="" /></div>
+            <div><img src={bill} alt="" /></div>
+            <div><img src={group} alt="" /></div>
+            <div><img src={hist} alt="" /></div>
         </div>
 
     )

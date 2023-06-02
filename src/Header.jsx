@@ -5,10 +5,14 @@ export default function myHeader() {
 
     return (
 
-        <div>
-            <h1>Olá, <span>{user}</span></h1>
-            <h3>Fica ligada nas contas ;)</h3>
-            <img src={avatar} alt="" />
+        <div className="myHeader">
+            <div>
+                <h1>Olá, <span>{user}</span></h1>
+                <h3>Fica ligada nas contas ;)</h3>
+            </div>
+            <div>
+                <img src={avatar} alt="" />
+            </div>
         </div>
         
     )

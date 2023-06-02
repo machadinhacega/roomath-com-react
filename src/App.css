@@ -1,59 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;400;600;800&family=PT+Sans+Narrow:wght@700&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
 }
 
 :root {
   font-size: 62,5%;
+
+  --colorPrincipal : #007184;
+  --colurNeutral: #757679;
+  --colorSecundary: #E8990E;
+  --colorWithe: #ffffff;
 }
 
 
-img {
-  height: 40px;
+
+.home {
+  font-family: 'Montserrat';
+  font-weight: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.myHeader{
+  background: linear-gradient(360deg, var(--colorPrincipal) -0.75%, rgba(0, 113, 132, 0.900482) 64.48%, rgba(0, 113, 132, 0.89) 71.35%);
+  color: var(--colorWithe);
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+
+  padding: 1.8rem 0 3rem 0;
+  
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.myHeader h1{
+  font-size: 1.4rem;
+  font-weight: 200;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.myHeader h1 span{
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.myHeader h3{
+  font-size: .9rem;
+  font-weight: 300;
 }
 
-.card {
-  padding: 2em;
+.myHeader img {
+  height: 3.4rem;
+  border-radius: 2rem;
+  margin-top: -.5rem;
 }
 
-.read-the-docs {
-  color: #888;
-} */
+
+
+.resume {
+  margin-top: -1.75rem;
+
+  background-color: var(--colurNeutral);
+  color: var(--colorWithe);
+  border-radius: .3rem;
+
+  padding: 0rem 1rem 0rem 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+}
+
+.resume img{
+  margin-right: .5rem;
+}
+
+.resume h2 {
+  display: flex;
+  align-items: center;
+
+  font-size: .8rem;
+  font-weight: 300;
+  
+  height: 1.8rem;
+  border-left: 1px solid var(--colorWithe);
+  padding-left: .5rem;
+}
+
+
+
+.myHome {
+  background-color: var(--colorWithe);
+
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  color: var(--colurNeutral);
+}
+
+
+
+.billEmpty{
+  height: 60vh;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: 400;
+  
+}
+
+
+.containerBillList{}
+
+
+
+.expandButton {
+  border: none;
+  background-color: var(--colorWithe);
+
+  position: absolute;
+  right: 1.5rem;
+  top: 10.5rem;
+}
+
+
+.buttonAdd {
+  border: none;
+  background-color: var(--colorPrincipal);
+  
+  position: absolute;
+  right: 1rem;
+  bottom: 5rem;
+
+  padding: 1.3em;
+  border-radius: 2rem;
+}
+
+.buttonAdd img{
+  height: 1.1rem;
+}
+
+
+.navBar{
+  display: flex;
+  justify-content: center;
+  background-color: var(--colorWithe);
+  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.2);
+
+  width: 100vw;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.navBar div{
+  padding: .8rem 2rem .8rem 2rem;
+  border-left: 1px solid var(--colorWithe);  
+}
+
+.navBar div:nth-child(1){
+  border: none;
+}

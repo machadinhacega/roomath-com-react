@@ -11,12 +11,12 @@ import './App.css'
 function App() {
 
   return (
-    <div>
+    <div className='home'>
 
       <div>{myHeader()}</div>
       <div>{resume()}</div>
       <div>{myHome()}</div>
-      <div>{navBar()}</div>
+      <div> {navBar()}</div>
       
     </div>
   )
