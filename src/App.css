@@ -15,12 +15,13 @@
   --colorWithe: #ffffff;
 }
 
-
-
-.home {
+.app {
   font-family: 'Montserrat';
   font-weight: 100;
 
+}
+
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,8 +123,9 @@
 }
 
 
-.containerBillList{}
-
+button {
+  cursor: pointer;
+}
 
 
 .expandButton {
@@ -174,3 +176,65 @@
 .navBar div:nth-child(1){
   border: none;
 }
+
+
+.avatar {
+  height: 2.6rem;
+  border-radius: 2rem;
+}
+
+
+
+.containerBillList{
+  margin-top: 2.5rem;
+  width: 86vw;
+}
+
+li {
+  list-style: none;
+  display: flex;
+
+  margin-bottom: 1.5rem;
+  
+}
+
+.billContact{
+  display: flex;
+  width: 70%;
+  align-items: center;
+}
+
+.billContact h3{
+  margin-left: .6rem;
+}
+
+.billResume {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 30%;
+}
+
+.billResume h4{
+  color: var(--colurNeutral);
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.billResume h3{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.credito{
+  color: var(--colorPrincipal);
+}
+.despesa{
+  color: var(--colorSecundary);
+}
+
+.billResume h3 span {
+  font-weight: 700;
+}
+
+
+                 
