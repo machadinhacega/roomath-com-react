@@ -7,7 +7,7 @@ import homeContas from './HomeContas'
 
 
 
-import loadBills from './Bills'
+import loadBills from './users'
 const billList = loadBills()
 
 export default function myHome() {

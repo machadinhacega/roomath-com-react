@@ -191,11 +191,12 @@ button {
 }
 
 li {
-  list-style: none;
-  display: flex;
-
+  list-style: none;  
   margin-bottom: 1.5rem;
-  
+}
+
+.containerBill{
+  display: flex;
 }
 
 .billContact{
@@ -236,5 +237,6 @@ li {
   font-weight: 700;
 }
 
+.containerBillDetails{}
 
                  
