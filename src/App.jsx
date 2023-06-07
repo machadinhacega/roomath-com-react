@@ -8,9 +8,9 @@ function App() {
   return (
     <div className='app'>
       
-      <div>{home()}</div>
+      {/* <div>{home()}</div> */}
      
-      {/* <div>{addBill()}</div> */}
+      <div>{addBill()}</div>
       
 
     </div>

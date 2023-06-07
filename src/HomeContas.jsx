@@ -1,69 +1,84 @@
-import loadBills from "./users"
-const billList = loadBills ()
+import loadBills from "./z-friends"
+import myData from "./assets/myData"
 
+const user = myData()[0]
+const friends = myData()[1]
+const bills = myData()[2]
 
-
-const list = [
-    {id:1, contaId: 1, contaNome: 'pastel', valor: '28,50', grupo:false},
-    {id:1, contaId: 2, contaNome: 'aluguel', valor: '350,00', grupo: '304'},
-    {id:2, contaId: 1, contaNome: 'pizza', valor:'19,00', grupo: 'canoa'}
-]
-
-
+import expandBillsButton from "./HomeButtonExpand"
+const show = expandBillsButton()
 
 export default function homeContas(){
-
     return(
-        <div className='containerBillList'>
-        <ul>
-            {billList.map( (billList) => {
-                return (
-                        <div>
-                            <li key={billList.userId}>
+
+        <div className="containerBillList">
+            
+            
+
+            <ul>
+                {friends.map( (friends) => {
+                    return(
+                        <div className='containerBillList'>
+                            <li key={friends.id}>
                                 <div className="containerBill">
                                     <div className="billContact">
-                                        <img className="avatar" src={billList.imagem} alt="" />
-                                        <h3>{billList.nome}</h3>
+                                        <img className="avatar" src={friends.avatar} alt="foto de perfil do amigo veaco" />
+                                        <h3>{friends.name}</h3>
                                     </div>
                                     <div className="billResume">
-                                        <h4>{(billList.devendo)? <p>Você deve</p> :<p>Deve a você</p>}</h4>
-                                        {(billList.devendo)? 
-                                        <h3 className="despesa">R$ <span>{billList.valorTotal}</span></h3>
-                                        :
-                                        <h3 className="credito">R$ <span>{billList.valorTotal}</span></h3>
-                                        }
+                                        <h4>{(friends.debt)?<p>Deve a você</p>:<p>Você deve</p>}</h4>
+                                        {(friends.debt)?
+                                        <h3 className="credito">R$ <span>{friends.totalAmount}</span></h3>:
+                                        <h3 className="despesa">R$ <span>{friends.totalAmount}</span></h3>}
                                     </div>
                                 </div>
+                                
 
 
+                                {(show)?
+                                    <div>
+                                        <ul>
+                                            {bills.map( (bills) => {
+                                                return (
+                                                    <div>
+                                                        {(friends.name == bills.involved[1])?
+                                                        <li key={bills.id} className="itemBillDescription">
+                                                            <div className="containerBillDescription">
+                                                                {(bills.paidFor == user[0].name)?
+                                                                <div className="markLine Credt"></div>
+                                                                :
+                                                                <div className="markLine Debt"></div>}
+                                                                {(bills.paidFor == user[0].name)?
+                                                                <h4 className="billDescription Credt">R$ {bills.amount} {(bills.group)?<span>em {bills.group}</span>:<span>fora de grupos</span>}</h4>
+                                                                :
+                                                                <h4 className="billDescription Debt">R$ {bills.amount} {(bills.group)?<span>em {bills.group}</span>:<span>fora de grupos</span>}</h4>
+                                                                }
+                                                            </div>
+                                                        </li>
+                                                        :
+                                                        <p></p>}
+                                                    </div>
+                                                )
+                                            }) }
+                                        </ul>
+                                    </div>
+                                :
+                                    <div></div>
+                                }
 
-                                <h2>xxx</h2>
-                                <h2>{billList['contas'][0].grupo}</h2>
-                                <h2>{billList['contas'].contaId}</h2>
+
 
 
 
                             </li>
-
                         </div>
-                        )
-            })
-                
-            }
-        </ul>
-       </div>
+                    )
+                } )}
+            </ul>
+        </div>
+
     )
     
 }
 
 
-
-// const billList = [
-//     {id:'1', imagem:'https://trello.com/1/cards/6477aa0a218e927787924709/attachments/647f73d93e20f6e6af21730c/previews/647f73da3e20f6e6af217379/download/Perfil-Foto.png', nome: 'Saulo Cruz', valorTotal:'321,50', devendo:true, 
-//         contas:[
-//             {contaId: 1, contaNome: 'pastel', valor: '28,50', grupo:false}, 
-//             {contaId: 2, contaNome: 'aluguel', valor: '350,00', grupo: '304'}]},
-//     {id:'2', imagem:'https://trello.com/1/cards/6477aa0a218e927787924709/attachments/647f73d8da76cbf23b224cc9/previews/647f73d9da76cbf23b224d39/download/Perfil-Foto_%281%29.png', nome: 'Juliano', valorTotal:'19,00', devendo:true, 
-//         contas:[
-//             {contaId: 1, contaNome: 'pizza', valor:'19,00', grupo: 'canoa'}]}
-// ]

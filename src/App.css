@@ -10,8 +10,10 @@
   font-size: 62,5%;
 
   --colorPrincipal : #007184;
+  --colorPrincipalClara: #51C9E3;
   --colurNeutral: #757679;
   --colorSecundary: #E8990E;
+  --colorSecundaryClara: #EFBA60;
   --colorWithe: #ffffff;
 }
 
@@ -237,6 +239,45 @@ li {
   font-weight: 700;
 }
 
-.containerBillDetails{}
 
-                 
+.itemBillDescription{
+  margin: 0;
+}
+
+.containerBillDescription{
+  display: flex;
+}
+
+
+
+
+.billDescription{
+  font-size: .85rem;
+  font-weight: 500;
+  margin: .2rem 0 0 .2rem;
+}
+
+
+.markLine {
+  height: 1rem;
+  width: 1rem;
+
+  margin: -.2rem 0 0 3.3rem;
+  border-left: 1px dashed;
+  border-bottom: 1px dashed;
+}
+
+
+.Credt{
+  border-color: var(--colorPrincipalClara);
+  color: var(--colorPrincipalClara);
+}
+.Debt{
+  border-color: var(--colorSecundaryClara);
+  color: var(--colorSecundaryClara);
+}
+
+
+#nomeConta::placeholder{
+  color: var(--colorPrincipal);
+}

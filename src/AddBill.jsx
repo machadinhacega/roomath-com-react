@@ -17,24 +17,53 @@ export default function addBill(){
     return (
 
         <div>
+
+            <form action="" method='get'>
+                <div>
+                    <label htmlFor=""></label>
+                    <input type="text" name="" id="" />
+                </div>
+            </form>
+
+
+
+
+
+
+
+
+            <h1>#############################################</h1>
+
+
+
+
+
+
+
+
+
+
+
             <div>
                 <img src={back} alt="" />
                 <h1>Adicionar despesa</h1>
                 <img src={okay} alt="" />
             </div>
             <div>
-                <h2>Envolvidos:</h2>
+                <label htmlFor="">Envolvidos:</label>
+                <input type="text" />
             </div>
             <div>
                 <div>
-                    <img src={addNome} alt="" />
-                    <h3>Nome da Conta</h3>
+                    <label htmlFor="nomeConta"><img src={addNome} alt="" /></label>
+                    <input type="text" id='nomeConta' placeholder='Nome da Conta' name='nomeConta'/>
                 </div>
                 <div>
-                    <img src={addValor} alt="" />
-                    <h3>Valor</h3>
+                    <label htmlFor="valor"><img src={addValor} alt="" /></label>
+                    <input type="number" id='valor' placeholder='Valor' name='valor'/>
                 </div>
                 <div>
+                    
                     <img src={addQuem} alt="" />
                     <h3>Pago por:</h3>
                     <img className='avatar' src={avatar} alt="" />
@@ -53,6 +82,14 @@ export default function addBill(){
                 <h2>Cancelar</h2>
                 <h2>Salvar</h2>
             </div>
+
+
+
+
+
+
+
+    
         </div>
     )
 }

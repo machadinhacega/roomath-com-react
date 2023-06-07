@@ -1,17 +1,18 @@
-export default function myHeader() {
+import myData from "./assets/myData"
 
-    const user = 'Fulana'
-    const avatar = 'https://trello.com/1/cards/6477aa0a218e927787924709/attachments/6477aa0b05dd5de039a67e5e/previews/6477aa0c05dd5de039a67f5f/download/foto-perfill.png'
+const user = myData()[0]
+
+export default function myHeader() {
 
     return (
 
         <div className="myHeader">
             <div>
-                <h1>Olá, <span>{user}</span></h1>
+                <h1>Olá, <span>{user[0].name}</span></h1>
                 <h3>Fica ligada nas contas ;)</h3>
             </div>
             <div>
-                <img src={avatar} alt="" />
+                <img src={user[0].avatar} alt="" />
             </div>
         </div>
         
