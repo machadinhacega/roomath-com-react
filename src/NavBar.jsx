@@ -8,10 +8,10 @@ export default function navBar() {
     return(
 
         <div className='navBar'>
-            <div><img src={home} alt="" /></div>
-            <div><img src={bill} alt="" /></div>
-            <div><img src={group} alt="" /></div>
-            <div><img src={hist} alt="" /></div>
+            <div><a href="#"><img src={home} alt="ira para home" /></a></div>
+            <div><a href="#"><img src={bill} alt="ir para contas" /></a></div>
+            <div><a href="#"><img src={group} alt="ir para grupos" /></a></div>
+            <div><a href="#"><img src={hist} alt="ir para o histórico" /></a></div>
         </div>
 
     )
