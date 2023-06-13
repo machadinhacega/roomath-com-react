@@ -16,75 +16,63 @@ export default function addBill(){
 
     return (
 
-        <div>
+        <div className='default addBill'>
+
+            <div className='containerTitle'>
+                <a href="#"><img src={back} alt="" /></a>
+                <h1>Adicionar despesa</h1>
+                <a href="#"><img src={okay} alt="" /></a>
+            </div>
+
 
             <form action="" method='get'>
-                <div>
-                    <label htmlFor=""></label>
-                    <input type="text" name="" id="" />
+
+                <div className='formHeader'>
+                    <label htmlFor="envolvidos">Envolvidos:</label>
+                    <input type="text" name="envolvidos" id="envolvidos" />
                 </div>
+
+                <div className='formBody'>
+                    <div>
+                        <label htmlFor="nomeConta"><img src={addNome} alt="" /></label>
+                        <input type="text" id='nomeConta' placeholder='Nome da Conta' name='nomeConta'/>
+                    </div>
+                    <div>
+                        <label htmlFor="valor"><img src={addValor} alt="" /></label>
+                        <input type="number" id='valor' placeholder='Valor' name='valor'/>
+                    </div>
+                    <div>
+                        <label htmlFor="selectedPaidFor">
+                        <img src={addQuem} alt="" /></label>
+                        <p className='FormPaidFor'>Pago por:</p>
+                        <select name="selectedPaidFor" id="selectedPaidFor">
+                            <option value="" disabled selected>Selecione pagante</option>
+                            <option value="">Você</option>
+                            <option value="">Saulo</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor="selectedPaidFor">
+                        <img src={addDividir} alt="" /></label>
+                        <select name="selectedPaidFor" id="selectedPaidFor">
+                            <option value="" selected>Dividido igulamente</option>
+                            <option value="">Você pagou o valor total</option>
+                            <option value="">Saulo pagou o valor total</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor=""><img src={addLembrete} alt="" /></label>
+                        <button>Lembrar da conta</button>
+                    </div>
+                </div>
+
+
+                <div className='formFooter'>
+                        <div><h2>Cancelar</h2></div>
+                        <div><h2>Cadastrar</h2></div>
+                    </div>
+
             </form>
-
-
-
-
-
-
-
-
-            <h1>#############################################</h1>
-
-
-
-
-
-
-
-
-
-
-
-            <div>
-                <img src={back} alt="" />
-                <h1>Adicionar despesa</h1>
-                <img src={okay} alt="" />
-            </div>
-            <div>
-                <label htmlFor="">Envolvidos:</label>
-                <input type="text" />
-            </div>
-            <div>
-                <div>
-                    <label htmlFor="nomeConta"><img src={addNome} alt="" /></label>
-                    <input type="text" id='nomeConta' placeholder='Nome da Conta' name='nomeConta'/>
-                </div>
-                <div>
-                    <label htmlFor="valor"><img src={addValor} alt="" /></label>
-                    <input type="number" id='valor' placeholder='Valor' name='valor'/>
-                </div>
-                <div>
-                    
-                    <img src={addQuem} alt="" />
-                    <h3>Pago por:</h3>
-                    <img className='avatar' src={avatar} alt="" />
-                    <h3>{user}</h3>
-                </div>
-                <div>
-                    <img src={addDividir} alt="" />
-                    <h3>Dividido igualmente</h3>
-                </div>
-                <div>
-                    <img src={addLembrete} alt="" />
-                    <h3>Lembrar da conta</h3>
-                </div>
-            </div>
-            <div>
-                <h2>Cancelar</h2>
-                <h2>Salvar</h2>
-            </div>
-
-
-
 
 
 

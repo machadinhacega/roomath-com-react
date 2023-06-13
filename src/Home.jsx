@@ -5,7 +5,7 @@ import navBar from './NavBar'
 
 export default function home(){
     return (
-        <div className='home'>
+        <div className='default home'>
             <div>{myHeader()}</div>
             <div>{resume()}</div>
             <div>{myHome()}</div>
