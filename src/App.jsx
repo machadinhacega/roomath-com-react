@@ -1,5 +1,6 @@
 import home from './Home'
 import addBill from './AddBill'
+import allBills from './AllBills'
 import './App.css'
 
 
@@ -10,8 +11,10 @@ function App() {
       
       {/* <div>{home()}</div> */}
      
-      <div>{addBill()}</div>
+      {/* <div>{addBill()}</div> */}
       
+      <div>{allBills()}</div>
+
 
     </div>
   )

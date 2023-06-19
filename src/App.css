@@ -11,16 +11,35 @@
 
   --colorPrincipal : #007184;
   --colorPrincipalClara: #51C9E3;
+  --colorGrayLigth: #a9aaac;
   --colurNeutral: #757679;
+  --colurSemiNeutral: #626366;
   --colorSecundary: #E8990E;
   --colorSecundaryClara: #EFBA60;
   --colorWithe: #ffffff;
 }
 
+.flex {
+  display: flex;
+}
+
+.columnsSemiCenter, .columnsCenter {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.columnsCenter { 
+  align-items: center;
+}
+
+
 .app {
   font-family: 'Montserrat';
   font-weight: 100;
-
+  color: var(--colurSemiNeutral);
 }
 
 .home {
@@ -228,6 +247,7 @@ li {
   font-size: 1.2rem;
   font-weight: 400;
 }
+
 .credito{
   color: var(--colorPrincipal);
 }
@@ -281,3 +301,84 @@ li {
 #nomeConta::placeholder{
   color: var(--colorPrincipal);
 }
+
+
+
+.allBills{}
+
+
+.billSelector{
+  margin: 2rem 0 3rem 0;
+
+  height: 2rem;
+  width: 13rem;}
+
+.billSelector select{
+  appearance: none;
+  
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 1.2rem;
+  
+  height: 3.5rem;
+  width: 15rem;
+
+  padding-left: .8rem;
+
+  overflow: hidden;
+
+  border-radius: .6rem;
+
+  color: var(--colorWithe);
+  /* background-color: #007184; */
+  background: url('./assets/img/setaSelector.svg') no-repeat var(--colorPrincipal);
+  background-position: right 10px top 50%;
+  background-size: .8rem;
+}
+
+
+.billSelector select:hover{
+  border-radius: .6rem .6rem 0 0;
+}
+
+
+.billSelector select option{
+  font-size: 1rem;
+
+  color: var(--colurNeutral);
+  background-color: var(--colorWithe);
+}
+
+
+.billUnid{
+  margin-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--colorGrayLigth);
+}
+
+.billDate{
+  width: 10vw;
+}
+
+.billImg img{
+  height: 3rem;
+  border-radius: 2rem;
+  margin-left: 1rem;
+}
+
+.billDesc{
+  margin-left: 1rem;
+  width: 40vw;
+}
+
+.billName{
+  font-size: 1.2rem;
+}
+
+.billDescValue{
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+
+
