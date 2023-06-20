@@ -25,6 +25,22 @@ const friends = [
     }
 ]
 
+const group = [
+    {
+        id: 1,
+        name: '304',
+        members:[user[0].name, friends[0].name],
+        avatar: 'https://trello.com/1/cards/6477aa0a218e927787924709/attachments/64920ba7dfd42bc93dea355d/download/image.png',
+
+    },{
+        id: 2,
+        name: 'Canoa',
+        members: [user[0].name, friends[0].name, friends[1].name],
+        avatar: 'https://trello.com/1/cards/6477aa0a218e927787924709/attachments/64920bbb03ee3c37e0dc52fd/download/image.png'
+
+    }
+]
+
 
 const bills = [
     {
@@ -60,5 +76,5 @@ const bills = [
 
 
 export default function myData(){
-    return ([user, friends, bills ])
+    return ([user, friends, bills, group ])
 }

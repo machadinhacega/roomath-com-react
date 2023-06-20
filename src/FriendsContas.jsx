@@ -3,11 +3,14 @@ import myData from "./assets/myData"
 const user = myData()[0]
 const friends = myData()[1]
 const bills = myData()[2]
+const group = myData()[3]
 
 import expandBillsButton from "./HomeButtonExpand"
 const show = expandBillsButton()
 
-export default function homeContas(){
+
+
+export default function friendsContas(){
     return(
 
         <div className="containerBillList">
@@ -15,15 +18,17 @@ export default function homeContas(){
             
 
             <ul>
-                {friends.map( (friends) => {
+                {group.map( (group) => {
                     return(
                         <div className='containerBillList'>
-                            <li key={friends.id}>
+                            <li key={group.id}>
                                 <div className="containerBill">
                                     <div className="billContact">
-                                        <img className="avatar" src={friends.avatar} alt="foto de perfil do amigo veaco" />
-                                        <h3>{friends.name}</h3>
+                                        <img className="avatar" src={group.avatar} alt="foto de perfil do amigo veaco" />
+                                        <h3>{group.name}</h3>
                                     </div>
+                                    {/* PRECISA CRIAR A LÓGICA DO RESUMO DAS CONTAS EM GRUPO */}
+                                    {/* CALCULAR QUANTO O USUARIO DEVE, OU NÃO EM CADA GRUPO */}
                                     <div className="billResume">
                                         <h4>{(friends.debt)?<p>Deve a você</p>:<p>Você deve</p>}</h4>
                                         {(friends.debt)?
@@ -33,7 +38,8 @@ export default function homeContas(){
                                 </div>
                                 
 
-
+                                {/* PRECISA CRIAR A LÓGICA DO RESUMO DAS CONTAS EM GRUPO */}
+                                {/* MOSTRAR (SHOW) SOMENTE AS CONTAS QUE FAZEM PARTE DE GRUPO */}
                                 {(show)?
                                     <div>
                                         <ul>

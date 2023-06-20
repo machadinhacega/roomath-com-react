@@ -1,24 +1,23 @@
 import expand from './assets/img/expand.svg'
 
-import homeContas from './HomeContas'
+import friendsContas from './FriendsContas'
 import buttonAdd from './ButtonAdd'
 
-import myData from "./assets/myData"
-const bills = myData()[2]
 
+import loadBills from './z-friends'
+const billList = loadBills()
 
-
-export default function myHome() {
+export default function friendsMyFriends() {
 
     return(
         <div className='myHome'>
             
             <div><button className='expandButton'><img src={expand} alt="" /></button></div>
             
-            {(bills[0]) ? 
-            <div>{homeContas()}</div>
+            {(billList[0]) ? 
+            <div>{friendsContas()}</div>
             :               
-            <div className='billEmpty'><p>Registre uma despesa para começar</p> </div>
+            <div className='billEmpty'><p>Você e seus amigos estão quites</p> </div>
             }
 
             <div>{buttonAdd()}</div>

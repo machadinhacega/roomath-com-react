@@ -7,6 +7,9 @@ const user = myData()[0]
 const friends = myData()[1]
 const bills = myData()[2]
 
+// ATIVAR DESCRIÇÃO
+const descActive = false
+// const descActive = true
 
 export default function allBills() {
     return (
@@ -21,7 +24,7 @@ export default function allBills() {
             </div>
 
             <div className="billUnid flex">
-                <div className="billDate columnsCenter">
+                <div className="billDate">
                     <h4>nov.</h4>
                     <h3>05</h3>
                 </div>
@@ -31,6 +34,8 @@ export default function allBills() {
                 <div className="billDesc columnsSemiCenter">
                     <h2 className="billName">Pastel</h2>
                     <h3 className="billDescValue">Você pagou R$15,00</h3>
+                    {(descActive)?<p>Dividido igualmente</p>:<p></p>}
+                    {(descActive)?<p>Com todos do grupo Festival Mada 2022</p>:<p></p>}
                 </div>
                 <div className="billResume">
                     <h4>devem a você</h4>
@@ -46,7 +51,7 @@ export default function allBills() {
 
 
             <div className="billUnid flex">
-                <div className="billDate columnsCenter">
+                <div className="billDate">
                     <h4>nov.</h4>
                     <h3>05</h3>
                 </div>
@@ -56,6 +61,8 @@ export default function allBills() {
                 <div className="billDesc columnsSemiCenter">
                     <h2 className="billName">Pastel</h2>
                     <h3 className="billDescValue">Você pagou R$15,00</h3>
+                    {(descActive)?<p>Dividido igualmente</p>:<p></p>}
+                    {(descActive)?<p>Com Saulo Cruz, Geancarlo Schaffer, Maria Estela, Matheus Chagas e Mariana Machado</p>:<p></p>}
                 </div>
                 <div className="billResume">
                     <h4>devem a você</h4>
@@ -70,7 +77,7 @@ export default function allBills() {
 
 
             <div className="billUnid flex">
-                <div className="billDate columnsCenter">
+                <div className="billDate">
                     <h4>nov.</h4>
                     <h3>05</h3>
                 </div>
@@ -80,6 +87,8 @@ export default function allBills() {
                 <div className="billDesc columnsSemiCenter">
                     <h2 className="billName">Pastel</h2>
                     <h3 className="billDescValue">Você pagou R$15,00</h3>
+                    {(descActive)?<p>Dividido igualmente</p>:<p></p>}
+                    {(descActive)?<p>Com todos do grupo Festival Mada 2022</p>:<p></p>}
                 </div>
                 <div className="billResume">
                     <h4>devem a você</h4>

@@ -201,6 +201,9 @@ button {
 
 .avatar {
   height: 2.6rem;
+  width: 2.6rem;
+  object-fit: cover;
+  object-position: center;
   border-radius: 2rem;
 }
 
@@ -360,10 +363,21 @@ li {
   width: 10vw;
 }
 
+.billDate h4{
+  font-size: .8rem;
+  font-weight: 400;
+  margin-bottom: -.1rem;
+}
+
+.billDate h3{
+  margin-top: -.1rem;
+  font-size: 1.4rem;
+}
+
 .billImg img{
   height: 3rem;
   border-radius: 2rem;
-  margin-left: 1rem;
+  margin-left: .1rem;
 }
 
 .billDesc{
@@ -378,7 +392,16 @@ li {
 .billDescValue{
   font-size: .8rem;
   font-weight: 500;
+  color: var(--colurNeutral);
 }
 
+.billDesc p {
+  font-size: .8rem;
+  font-weight: 400;
 
+  color: var(--colorPrincipalClara);
+}
 
+.billDesc :nth-child(3) {
+  font-weight: 600;
+}
