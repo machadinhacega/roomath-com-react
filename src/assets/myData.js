@@ -42,6 +42,8 @@ const group = [
 ]
 
 
+
+
 const bills = [
     {
         id: 1,
@@ -60,7 +62,7 @@ const bills = [
         paidFor: [friends[0].name],
         dividedBy: 2,
         alarm: true,
-        group: '304'
+        group: group[0].name
     },{
         id: 3,
         involved: [user[0].name,friends[1].name],
@@ -69,7 +71,7 @@ const bills = [
         paidFor: [friends[1].name],
         dividedBy: 2,
         alarm: false,
-        group: 'Canoa'
+        group: group[1].name
     },
     
 ]
