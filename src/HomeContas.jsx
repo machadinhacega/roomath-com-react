@@ -27,8 +27,8 @@ export default function homeContas(){
                                     <div className="billResume">
                                         <h4>{(friends.debt)?<p>Deve a você</p>:<p>Você deve</p>}</h4>
                                         {(friends.debt)?
-                                        <h3 className="credito">R$ <span>{friends.totalAmount}</span></h3>:
-                                        <h3 className="despesa">R$ <span>{friends.totalAmount}</span></h3>}
+                                        <h3 className="credito">R$ <span>{Math.abs(friends.totalAmount)}</span></h3>:
+                                        <h3 className="despesa">R$ <span>{Math.abs(friends.totalAmount)}</span></h3>}
                                     </div>
                                 </div>
                                 
@@ -48,9 +48,21 @@ export default function homeContas(){
                                                                 :
                                                                 <div className="markLine Debt"></div>}
                                                                 {(bills.paidFor == user[0].name)?
-                                                                <h4 className="billDescription Credt">R$ {bills.amount} {(bills.group)?<span>em {bills.group}</span>:<span>fora de grupos</span>}</h4>
+                                                                <h4 className="billDescription Credt">
+                                                                    Receber<span>R$ {bills.amount/bills.dividedBy}</span>
+                                                                        {(bills.group)
+                                                                        ?
+                                                                        <span>em {bills.group}</span>
+                                                                        :
+                                                                        <span>fora de grupos</span>}</h4>
                                                                 :
-                                                                <h4 className="billDescription Debt">R$ {bills.amount} {(bills.group)?<span>em {bills.group}</span>:<span>fora de grupos</span>}</h4>
+                                                                <h4 className="billDescription Debt">
+                                                                    Devolver<span>R$ {bills.amount/bills.dividedBy}</span>
+                                                                        {(bills.group)
+                                                                        ?
+                                                                        <span>em {bills.group}</span>
+                                                                        :
+                                                                        <span>fora de grupos</span>}</h4>
                                                                 }
                                                             </div>
                                                         </li>
