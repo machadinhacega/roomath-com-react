@@ -4,8 +4,9 @@ import friendsContas from './FriendsContas'
 import buttonAdd from './ButtonAdd'
 
 
-import loadBills from './z-friends'
-const billList = loadBills()
+
+import myData from './assets/myData'
+const bills = myData()[2]
 
 export default function friendsMyFriends() {
 
@@ -14,7 +15,7 @@ export default function friendsMyFriends() {
             
             <div><button className='expandButton'><img src={expand} alt="" /></button></div>
             
-            {(billList[0]) ? 
+            {(bills) ? 
             <div>{friendsContas()}</div>
             :               
             <div className='billEmpty'><p>Você e seus amigos estão quites</p> </div>
